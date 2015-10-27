@@ -1,0 +1,167 @@
+<table class="table-stripe clean" style="width:100%">
+<tr>
+       <td></td>
+       <td>Tile Clean</td> 
+       <td>Clear Seal</td>
+       <td>Color Seal</td>
+</tr>
+  <tr>
+    <td> Room(s)</td><td><select id="roomsclean1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select></td>
+
+<td><select id="roomsclear1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select>  </td>
+
+<td><select id="roomscolorseal1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select>  </td>
+
+ <tr>
+    <td> Staircase(s)</td><td><select id="staircasesclean1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select></td>
+
+<td><select id="staircasesclear1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select>  </td>
+
+<td><select id="staircasecolorseal1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select>  </td>
+
+ <tr>
+    <td> Bath/Laundry(s)</td><td><select id="bathsclean1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select></td>
+
+<td><select id="bathsclear1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select>  </td>
+
+<td><select id="bathcolorseal1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select>  </td>
+  </tr>
+   <tr>
+    <td> Hallway(s)</td><td><select id="hallwaysclean1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select></td>
+
+<td><select id="hallwaysclear1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select>  </td>
+
+<td><select id="hallwaycolorseal1" size="1">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+   <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+   <option value="8">8</option>
+  <option value="9">9</option>
+</select>  </td></tr>
+</table> 

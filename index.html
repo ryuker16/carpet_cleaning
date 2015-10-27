@@ -1,0 +1,700 @@
+<!doctype html>
+<html class="no-js">
+<!-- ** Clean Path Carpet Main HTML index file ** 
+
+Version 2.0.3
+
+Angular.js MVC used to provide non-static content and resides in the js folder as app.js
+Front end framework: bootstrap
+Grunt builds a minified version of this file for production.
+
+Author: Will Wilkins III
+ --> 
+
+
+  <head>
+  
+  <!--meta tags --> 
+    <meta charset="utf-8">
+    <title>CP Carpet Cleaning</title>
+	
+    <meta name="description" content="Chicago Land best Carpet Cleaning">
+    <meta name="viewport" content="width=device-width">
+   
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel='stylesheet' href='bower_components/magic/magic.min.css' />
+    <!-- endbower -->
+	
+    <!-- endbuild -->
+	
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+	
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <!-- endbuild -->
+  </head>
+ 
+  
+  <body ng-app="clientApp">
+
+
+
+		
+<!-- Main container --> 
+     <div class="container">
+	 
+	 <!-- Header--> 
+	 <div class="header">
+      <nav class="navbar navbar-default navbar-custom" role="navigation">
+     
+
+          <div class="navbar-header">
+ 
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <!-- Site logo -->       
+		<a class="navbar-brand" ui-sref="index"><img style="height:100%;" src="images/cplogo1_01.png"></a>
+          </div>
+			<!-- Nav --> 
+          <div class="collapse navbar-collapse" id="navbar">
+
+            <ul class="nav navbar-nav" >
+			<!-- --> 
+              <li ><a ui-sref="index">Home</a></li>
+              <li ><a  ui-sref="carpet">Carpet Cleaning</a> </li>
+              <li><a  ui-sref="tile">Tile Cleaning</a></li>
+              <li><a ui-sref="furniture">Furniture Cleaning</a></li>
+              <li><a ui-sref="about">About</a></li>
+			  <!-- contact us modal --> 
+              <li><a href="" data-toggle="modal"  data-target="#quote" >Contact us</a></li>
+            </ul>
+   
+    </div>
+        
+     
+          </nav>
+ 
+</div>
+
+
+  <!-- Wrapper for slides -->
+
+<!-- slides go here -->
+  <div class="" ng-controller="bubble"  ui-view="viewAll">
+  
+
+  </div>
+  <!--Content and quoting table begin here; 1 bootstrap responsive columns for  each --> '
+  
+  <div  class="row  middle ">
+    
+    <div class="col-md-8" ><div class="page-header">
+	<!-- title --> 
+  	 <h2 class="titleBox" ui-view="view1"></h2><br>
+	 </div>
+	 <!-- text content --> 
+	<div class="" ui-view="view2"> 
+    </div>     
+    </div>
+      <div class="col-md-4" >
+       <!-- Beginning of table --> 
+	   <!-- Table Title Area--> 
+<h1 style="text-align:center; color: #095EDE;"> <b>Insta-Quote</b><br><small style="color:#00AAFF;"> Get Quotes fast!<br> Enter Number of Areas</small> </h1>
+<!-- form price calculator --> 
+   <form id="viewcart" ng-controller="quoteForm" >  
+  <input type="button" class="btnmod btn btn-primary" data-toggle="collapse" data-target="#carpetclean" value="Carpet Cleaning" style="width:100%">
+
+  <!--Each column/row option triggers dynamically updates/stores current value in the factory(custData) object table; values can be obtained here. --> 
+        <table id="carpetclean"  class="table-stripe clean  panel-collapse-in">
+			
+<thead>
+        <tr>
+       <th></th>
+       <th>Clean</th> 
+       <th>Scotch<br> Guard</th>
+       <th>Deodorize</th>
+</tr>
+
+  <tr>
+      <td>Room(s)</td>
+            <td>
+              <select size="1" id="roomsclean1" ng-model="customers[0].area">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </td>
+            <td>
+              <select size="1" id="roomsprotect1" ng-model="customers[1].area">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </td>
+            <td>Free!</td>
+          </tr>
+          <tr>
+            <td>Staircase(s)</td>
+            <td>
+              <select size="1" id="staircasesclean1" ng-model="customers[2].area">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </td>
+            <td>
+              <select size="1" id="staircasesprotect1" ng-model="customers[3].area">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </td>
+            <td>Free!</td>
+          </tr>
+          <tr>
+            <td>Bath/Laundry(s)</td>
+            <td>
+              <select size="1" id="bathsclean1" ng-model="customers[4].area">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </td>
+            <td>
+              <select size="1" id="bathsprotect1" ng-model="customers[5].area">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </td>
+            <td>Free!</td>
+          </tr>
+          <tr>
+            <td>Hallway(s)</td>
+            <td>
+              <select size="1" id="hallwaysclean1" ng-model="customers[6].area">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </td>
+            <td>
+              <select size="1" id="hallwaysprotect1" ng-model="customers[7].area">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select> </td>
+
+<td>Free!</td></tr>
+
+</tbody>
+</table> 
+        <button type="button" class="btnmod btn btn-primary" data-toggle="collapse" data-target="#tileclean" value="" style='width:100%'><span class="glyphicon glyphicon glyphicon-chevron-down glyphicon-align-right" style='float:right'aria-hidden="true"></span>Tile Cleaning</button>
+        <table id='tileclean' class='table-stripe clean panel-collapse collapse'>
+<thead>
+        <tr>
+       <th></th>
+       <th>Tile Clean</th> 
+       <th>Clear Seal</th>
+       <th>Color Seal</th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+    <td> Room(s)</td><td><select ng-model="customers[8].area" id='roomsclean2' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select></td>
+
+<td><select ng-model="customers[9].area" id='roomsclear1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+
+<td><select ng-model="customers[10].area" id='roomscolorseal1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+</tr>
+ <tr>
+    <td>Staircase(s)</td><td><select ng-model="customers[11].area" id='staircasesclean2' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select></td>
+
+<td><select ng-model="customers[12].area" id='staircasesclear1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+
+<td><select ng-model="customers[13].area" id='staircasescolorseal1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+</tr>
+ <tr>
+    <td> Bath/Laundry(s)</td><td><select ng-model="customers[14].area" id='bathsclean2' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select></td>
+
+<td><select ng-model="customers[15].area" id='bathsclear1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+
+<td><select ng-model="customers[16].area" id='bathscolorseal1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+  </tr>
+   <tr>
+    <td> Hallway(s)</td><td><select ng-model="customers[17].area" id='hallwaysclean2' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select></td>
+
+<td><select ng-model="customers[18].area" id='hallwaysclear1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+
+<td><select ng-model="customers[19].area" id='hallwayscolorseal1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td></tr>
+</tbody>
+</table> 
+ <button type='button'  class="btnmod btn btn-primary" data-toggle="collapse" data-target="#sofaclean" aria-expanded="false" aria-controls="sofaclean"  value="Furniture Cleaning" style='width:100%'><span class="glyphicon glyphicon glyphicon-chevron-down glyphicon-align-right" style='float:right'aria-hidden="true"></span>Furniture Cleaning</button>
+<table id="sofaclean" class='table-stripe clean panel-collapse collapse'>
+<thead>
+        <tr>
+       <th></th>
+       <th>Clean</th> 
+       <th>Scotch<br> Guard</th>
+       <th>Deodorize</th>
+</tr>
+</thead>
+<tbody>
+  <tr>
+    <td> Sofa(s)</td><td><select ng-model="customers[20].area" id='sofasclean1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select></td>
+
+<td><select ng-model="customers[21].area" id='sofasprotect1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+
+<td>Free!</td>
+</tr>
+
+ <tr>
+    <td> Sectional(s)</td><td><select ng-model="customers[22].area" id='sectionalsclean1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select></td>
+
+<td><select ng-model="customers[23].area" id='sectionalsprotect1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+
+<td>Free!</td>
+</tr>
+ <tr>
+    <td> Loveseat(s)</td><td><select ng-model="customers[24].area" id='loveseatsclean1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select></td>
+<td><select ng-model="customers[25].area" id='loveseatsprotect1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+
+<td>Free!</td>
+  </tr>
+   <tr>
+    <td> Chair(s)</td><td><select ng-model="customers[26].area" id='chairsclean1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select></td>
+
+<td><select ng-model="customers[27].area" id='chairsprotect1' size='1'>
+  <option value='0'>0</option>
+  <option value='1'>1</option>
+  <option value='2'>2</option>
+  <option value='3'>3</option>
+   <option value='4'>4</option>
+  <option value='5'>5</option>
+  <option value='6'>6</option>
+  <option value='7'>7</option>
+   <option value='8'>8</option>
+  <option value='9'>9</option>
+</select>  </td>
+
+<td>Free!</td>
+    </tr>
+    </tbody>
+</table>
+<br>
+<!-- Price minimum not met Alert --> 
+	 
+   <alert ng-show="alertBadPrice" type="{{alertPop[0].type}}">{{alertPop[0].msg}}</alert> 
+       <h3> Total: <small id='total'>{{sortByRooms() | currency}}</small></h3>
+	   
+	<!-- submit or reset buttons for quote table form--> 
+<div class="btn-group">
+	  <button type="submit" data-toggle="modal"  data-target="#quote" class="btnmod  btn btn-primary btn-lg">Get Quote!</button><button ng-click="resetAll()"  type="button" class="btnmod btn btn-primary btn-lg ">Reset all</button> </div>
+	   </form>
+<!-- End of form -->      
+	 </div>
+
+</div>
+
+</div>
+
+<!-- Footer --> 
+ <div class="footer"><div class='container'>
+ <div class="row ">
+ <div class="col-md-6">
+      <p> Clean Path Carpet cleaning - Walk the clean path</p>
+      </div>
+	 
+	   <div class="col-md-6">
+      <p>Call us at  <a class="titleLink" href="tel:+17739689072">773-968-9072</a> and get your Quote today!</p>
+      </div>
+	  </div>
+	  </div>
+	  </div>
+
+	  <!-- End of footer --> 
+
+
+<!-- Modals -Quote submit using default bootstrap html/css classes, this modal submits the price quote and user info to backend-->
+
+  <div class="modal fade" id="quote"   tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       
+      <div class="modal-body" >
+        <p> Thank you for contacting Clean Path Carpet Cleaning.<br> We are availible via this form or phone at <a href="tel:+17739689072">1-773-968-9072</a>. Walk the Clean Path Today! </p><br><br>
+		
+		<!-- controller -->
+		<form  ng-controller="submitForm" >
+	
+								<div class="form-group row">
+				 <div class="col-lg-6">
+		   <label for="firstNameField">First Name</label><input id="firstNameField" class="form-control"  type="text" ng-model="contact.fname" />
+		   </div>
+ <div class="col-lg-6">
+		   		   <label for="lastNameField">Last Name</label><input id="lastNameField"class="form-control"  type="text" ng-model="contact.lname" />
+				   </div>
+		   </div>
+				<div class="form-group row">
+				<div class="col-lg-6">
+    <label for="emailField">Email address</label>
+<input class="form-control"  id='emailField' type="email" ng-model="contact.email" />
+</div>
+<div class="col-lg-6">
+	 <label for="phoneField">Phone</label><input id="phoneField" class="form-control" type="tel" ng-model="contact.phone" /></div>
+	 </div>
+	 <div class="form-group row">
+				<div class="col-md-6">
+    <label for="streetField">Street address</label>
+<input class="form-control"  id='streetField' type="text" ng-model="contact.street" />
+</div>
+<div class="col-md-3">
+	 <label for="stateField">State</label><select id="stateField" class="form-control"  ng-model="contact.state" ng-options="state for state in usa">  
+	 <option value=""> </option>
+	 </select></div>
+	 <div class="col-md-3">
+	 <label for="zipField">Zip Code</label><input id="zipField" class="form-control" type="text" ng-model="contact.zipCode" /></div>
+	 </div>
+	<label for="mailMessage"> Message:</label> <br><textarea id="mailMessage" class='expandWide' rows="3" ng-model="contact.message"> </textarea><br><br>
+	<div class="table-responsive">
+	<div class="panel panel-primary">
+	  <div class="panel-heading btnmod">Insta-Quote - Get Quotes Fast!</div>
+  <div class="panel-body">
+    <p>Your Estimated Total is {{ sortByRooms() | currency}}, please submit the form and we will call you back to discuss your cleaning needs!</p>
+  </div>
+
+	<!--Table of customer's quote choices--> 
+  <table class="table table-striped">
+  <thead>
+        <tr>
+       <th>#</th> 
+       <th>Areas</th>
+       <th>Estimate Price</th>
+</tr>
+</thead>
+<!-- ng-repeat using my filter to build table --> 
+  <tbody ng-repeat="productType in customers| filter:myFilter">
+        <tr>
+          <td>{{productType.area}}</td> <td>{{productType.title}}</td><td>{{productType.area * productType.price | currency}}</td>
+        </tr>
+      </tbody>
+	  
+  </table>
+   
+      </div>
+	  </div>
+	  <!-- Alerts to show Email success/fail to end user --> 
+ 
+	<alert ng-show="alertEmailOk" type="{{alertPop[1].type}}">{{alertPop[1].msg}}</alert> 
+		    <alert ng-show="alertEmailFail" type="{{alertPop[2].type}}">{{alertPop[2].msg}}</alert> 
+      <div class="modal-footer">
+<!-- modal footer buttons--> 
+	  <alert ng-show="alertBadPrice" type="{{alertPop[3].type}}">{{alertPop[3].msg}}</alert> 
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" ng-click="makeMail()" class="btn btn-primary">Submit</button>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- script section --> 
+    <!-- build:js(.) scripts/vendor.js -->
+	
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-ui-router-anim-in-out/anim-in-out.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+		
+        <script src="scripts/app.js"></script>
+  
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,21 @@
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Contact us</h4>
+      </div>
+      <div class="modal-body" >
+                <p> Thank you for contacting Clean Path Carpet Cleaning. We are availible via email or phone at . Walk the Clean Path Today! <br><br>
+				
+				<form  ng-controller='emailForm' >
+		   Name: <br><input type="text" ng-model="user.name" /><br><br>
+    E-mail: <br><input type="email" ng-model="user.email" /><br><br>
+	Phone:<br> <input type="tel" ng-model="user.phone" /><br><br>
+	Message: <br><textarea rows="4" cols="50" ng-model="user.message"> </textarea><br><br>
+		{{user.phone}}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" ng-disabled="my_form.$invalid" ng-click='processForm(user)' class="btn btn-primary">Submit</button>
+		</form>
+      </div>
+    </div>

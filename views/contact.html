@@ -1,0 +1,10 @@
+<form  name="myform" ng-controller='emailForm' ng-submit="processForm(user)" novalidate >
+		   Name: <br><input type="text" ng-model="user.name" /><br><br>
+    E-mail: <br><input type="email" ng-model="user.email" /><br><br>
+	Phone:<br> <input type="tel" ng-model="user.phone" /><br><br>
+	Message: <br><textarea rows="4" cols="50" ng-model="user.message"> </textarea><br><br>
+		
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit"  ng-disabled="myform.$invalid"  class="btn btn-primary">Submit</button>
+		</form>
